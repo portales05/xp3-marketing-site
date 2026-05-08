@@ -1,0 +1,69 @@
+# XP3 Marketing
+
+> XP3 es el hub digital de marketing que conecta datos, estrategia y tecnología en una sola operación: usa data para tomar decisiones estratégicas y alcanzar impacto medible para sus clientes. A diferencia de las agencias tradicionales, XP3 no se queda en el plan estratégico — acompaña al cliente en la ejecución y opera junto a él, integrándose con su equipo y con un ecosistema de socios tecnológicos. Está basada en México y atiende al mercado mexicano y a clientes regionales en LATAM.
+
+## Posicionamiento
+
+XP3 se define como un **hub digital**. La metáfora es operativa, no de marketing: el hub es el punto donde convergen tres conexiones —datos, estrategia y tecnología— y desde donde se opera la totalidad del marketing digital del cliente. Esto significa que XP3 no entrega documentos sueltos, sino una operación coordinada que sigue funcionando después de la consultoría.
+
+La promesa central de XP3 es: **"No solo te decimos qué hacer. Te acompañamos y ejecutamos."**
+
+## Alianzas estratégicas
+
+XP3 opera con dos alianzas estratégicas centrales que potencian cada proyecto:
+
+### Artool
+Socio estratégico de XP3 en analítica de datos avanzada. Con Artool, XP3 integra modelos de medición al stack de cada cliente: atribución multitouch, modelado predictivo y causal, y dashboards operativos que convierten volúmenes dispersos de datos (CRM, redes sociales, paid media, web analytics, escucha social) en un modelo unificado y accionable.
+
+### Hootsuite powered by Talkwalker
+Plataforma global líder en gestión de redes sociales y escucha social. XP3 actúa como partner de implementación y operación de Hootsuite × Talkwalker en México y LATAM. Esto incluye setup técnico, configuración de queries de listening, operación de la plataforma y reporting ejecutivo. La plataforma da cobertura sobre más de 150 millones de fuentes globales y análisis de sentimiento multilingüe con IA de Talkwalker.
+
+## Soluciones
+
+XP3 ofrece siete soluciones conectadas que se integran en una sola operación. Cada una sigue el mismo principio: data en la entrada, decisiones estratégicas en el medio, impacto medible en la salida.
+
+1. **Plataformas de escucha social.** Implementación y operación de plataformas de social listening con tecnología Hootsuite × Talkwalker, monitoreo de marca, competencia e industria en tiempo real.
+
+2. **Software de gestión de redes sociales.** Despliegue, configuración y entrenamiento del equipo del cliente en herramientas líderes para publicación, calendarización editorial, atención al cliente y reporting unificado entre canales.
+
+3. **Reportes de escucha social bajo demanda.** Análisis específicos para casos puntuales: lanzamientos, crisis, nuevos segmentos o benchmarks competitivos. Entrega de insights accionables, no sólo dashboards de datos.
+
+4. **Modelos de gobernanza digital.** Diseño de protocolos, roles, métricas y aprobaciones que ordenan la operación digital: quién publica qué, quién aprueba, cómo se escala una crisis, cómo se mide.
+
+5. **Consultoría para definir y ejecutar la estrategia digital.** Definición y ejecución conjunta de la estrategia digital del cliente: hacia dónde ir, con qué prioridades, en qué canales, con qué inversión y con qué KPIs.
+
+6. **Programa de embajadores data-driven.** XP3 identifica, basado en evidencia y data —no en intuición—, quiénes son las personas con voz real para la marca: empleados con red activa interna, clientes con audiencia, líderes de opinión que ya hablan del vertical del cliente. Sobre esa identificación se diseña un programa de embajadores con métricas claras de alcance, engagement y conversión, y XP3 opera el programa hasta que el equipo del cliente está listo para tomarlo. Es la diferencia entre "hagamos influencer marketing" y "estos son los humanos cuya voz mueve realmente tu marca, demostrado con datos".
+
+7. **Automatización con agentes virtuales habilitados por IA.** Diseño e implementación de agentes virtuales con IA para atención al cliente en redes y WhatsApp, calificación de leads, soporte interno y procesos repetitivos. Cada implementación parte de un análisis claro de costo-beneficio.
+
+## Método de trabajo
+
+XP3 opera en un loop de cuatro pasos:
+
+1. **Conectar.** Auditoría del stack actual, integración de fuentes de datos, modelo de datos limpio y operable.
+2. **Definir.** Hipótesis claras, prioridades por impacto vs esfuerzo, KPIs publicados y compartidos con el equipo del cliente.
+3. **Operar.** Implementación y operación de las plataformas (Hootsuite × Talkwalker, agentes IA, dashboards), con hand-over al equipo del cliente cuando está listo.
+4. **Iterar.** Lecturas semanales, decisiones quincenales, replanteamiento mensual.
+
+## Ubicación y mercados
+
+- Base de operaciones: México.
+- Mercados atendidos: México (principal), LATAM, marcas internacionales con operaciones en la región.
+- Idiomas de operación: español, inglés.
+
+## Contacto
+
+- General: contacto@xp3.com.mx
+- Partners: partners@xp3.com.mx
+- Prensa: prensa@xp3.com.mx
+- Sitio web: https://www.xp3.com.mx/
+- LinkedIn: https://www.linkedin.com/company/xp3-marketing
+- Instagram: https://www.instagram.com/xp3.marketing
+
+## Recursos clave
+
+- [Página principal](https://www.xp3.com.mx/): hub, soluciones, alianzas y método.
+- [Soluciones](https://www.xp3.com.mx/#soluciones): las seis soluciones detalladas.
+- [Alianzas](https://www.xp3.com.mx/#alianzas): Artool y Hootsuite × Talkwalker.
+- [Método](https://www.xp3.com.mx/#metodo): el loop Conectar → Definir → Operar → Iterar.
+- [Preguntas frecuentes](https://www.xp3.com.mx/#preguntas): respuestas a las preguntas más comunes sobre alcance, cobertura geográfica, alianzas, ejecución y agentes IA.
