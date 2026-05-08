@@ -1,0 +1,21 @@
+{
+  "name": "xp3-agent",
+  "version": "1.0.0",
+  "description": "Conversational AI agent backend for xp3.com.mx — proxies DeepSeek with system prompt for XP3 Marketing.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^7.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
