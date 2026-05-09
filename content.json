@@ -11,300 +11,398 @@
     ],
     "reglas_importantes": [
       "PUEDES usar HTML básico dentro de los textos: <em>cursiva acento</em>, <strong>negrita</strong>, <b>negrita simple</b>, <br/> para salto de línea.",
-      "NO podés usar comillas dobles (\") dentro de los textos sin escaparlas con backslash. Si necesitás una comilla, escribí \\\" o usá comillas tipográficas: \u201ctexto\u201d.",
+      "NO podés usar comillas dobles (\") dentro de los textos sin escaparlas con backslash. Si necesitás una comilla, escribí \\\" o usá comillas tipográficas: “texto”.",
       "Las listas (items) tienen estructura fija. Podés cambiar el texto de cada item, pero agregar/quitar items requiere también editar el HTML.",
       "Los emails se editan en la sección 'contact' al final."
     ],
     "version": "1.0",
     "actualizado": "2026-05-08"
   },
-
   "meta": {
-    "title": "XP3 Marketing \u2014 Hub digital \u00b7 Consultor\u00eda que conecta datos, estrategia y tecnolog\u00eda",
-    "description": "XP3 es el hub digital de marketing que usa data para tomar decisiones estrat\u00e9gicas y alcanzar impacto medible. Consultor\u00eda con socios estrat\u00e9gicos Artool (anal\u00edtica de datos) y Hootsuite \u00d7 Talkwalker (escucha social). Soluciones: social listening, gesti\u00f3n de redes, gobernanza digital, estrategia, programa de embajadores data-driven, agentes virtuales con IA. No solo te decimos qu\u00e9 hacer, te acompa\u00f1amos y ejecutamos.",
-    "keywords": "hub digital marketing M\u00e9xico, consultor\u00eda marketing digital data-driven, escucha social M\u00e9xico, social listening, programa de embajadores data-driven, employee advocacy data, gobernanza digital, agentes virtuales IA, partner Hootsuite M\u00e9xico, partner Artool, Talkwalker M\u00e9xico, XP3"
+    "title": "XP3 Marketing — Hub digital · Consultoría que conecta datos, estrategia y tecnología",
+    "description": "XP3 es el hub digital de marketing que usa data para tomar decisiones estratégicas y alcanzar impacto medible. Consultoría con socios estratégicos Artool (analítica de datos) y Hootsuite × Talkwalker (escucha social). Soluciones: social listening, gestión de redes, gobernanza digital, estrategia, programa de embajadores data-driven, agentes virtuales con IA. No solo te decimos qué hacer, te acompañamos y ejecutamos.",
+    "keywords": "hub digital marketing México, consultoría marketing digital data-driven, escucha social México, social listening, programa de embajadores data-driven, employee advocacy data, gobernanza digital, agentes virtuales IA, partner Hootsuite México, partner Artool, Talkwalker México, XP3"
   },
-
   "topbar": {
     "ticker": [
-      { "label": "PARTNER", "text": "Hootsuite \u00d7 Talkwalker" },
-      { "label": "PARTNER", "text": "Artool \u00b7 Analytics" },
-      { "label": "HUB", "text": "Datos \u00b7 Estrategia \u00b7 Tecnolog\u00eda" },
-      { "label": "NEW", "text": "Programa de embajadores data-driven" },
-      { "label": "OPS", "text": "Social listening 24/7" },
-      { "label": "NEW", "text": "Agentes virtuales IA" },
-      { "label": "MARKETS", "text": "MX \u00b7 LATAM" }
+      {
+        "label": "PARTNER",
+        "text": "Hootsuite × Talkwalker"
+      },
+      {
+        "label": "PARTNER",
+        "text": "Artool · Analytics"
+      },
+      {
+        "label": "HUB",
+        "text": "Datos · Estrategia · Tecnología"
+      },
+      {
+        "label": "NEW",
+        "text": "Programa de embajadores data-driven"
+      },
+      {
+        "label": "OPS",
+        "text": "Social listening 24/7"
+      },
+      {
+        "label": "NEW",
+        "text": "Agentes virtuales IA"
+      },
+      {
+        "label": "MARKETS",
+        "text": "MX · LATAM"
+      }
     ]
   },
-
   "nav": {
     "links": [
-      { "href": "#soluciones", "text": "Soluciones" },
-      { "href": "#alianzas", "text": "Alianzas" },
-      { "href": "#metodo", "text": "M\u00e9todo" },
-      { "href": "#faq", "text": "FAQ" }
+      {
+        "href": "#soluciones",
+        "text": "Soluciones"
+      },
+      {
+        "href": "#alianzas",
+        "text": "Alianzas"
+      },
+      {
+        "href": "#metodo",
+        "text": "Método"
+      },
+      {
+        "href": "#faq",
+        "text": "FAQ"
+      }
     ],
     "ctaText": "Conversemos"
   },
-
   "hero": {
-    "eyebrow": "Exponential Performance \u00b7 Hub digital",
+    "eyebrow": "Exponential Performance · Hub digital",
     "headlineRow1": "Datos,",
     "headlineRow2": "estrategia y",
-    "headlineRow3Accent": "tecnolog\u00eda.",
+    "headlineRow3Accent": "tecnología.",
     "headlineRow3Small": "Conectados.",
-    "lede": "XP3 es la consultor\u00eda de marketing digital que opera como <b style=\"color: var(--ink); font-weight: 500;\">hub</b>: integra tus fuentes de datos, define la estrategia y la ejecuta con la mejor tecnolog\u00eda del mercado. <b style=\"color: var(--ink); font-weight: 500;\">No solo te decimos qu\u00e9 hacer \u2014 te acompa\u00f1amos y ejecutamos.</b>",
+    "lede": "XP3 es la consultoría de marketing digital que opera como <b style=\"color: var(--ink); font-weight: 500;\">hub</b>: integra tus fuentes de datos, define la estrategia y la ejecuta con la mejor tecnología del mercado. <b style=\"color: var(--ink); font-weight: 500;\">No solo te decimos qué hacer — te acompañamos y ejecutamos.</b>",
     "ctaPrimary": "Ver soluciones",
     "ctaSecondary": "Conocer alianzas",
     "metaTags": [
-      "<b>Artool</b> \u00b7 partner",
-      "<b>Hootsuite \u00d7 Talkwalker</b> \u00b7 partner",
-      "<b>MX</b> \u00b7 LATAM"
+      "<b>Artool</b> · partner",
+      "<b>Hootsuite × Talkwalker</b> · partner",
+      "<b>MX</b> · LATAM"
     ]
   },
-
   "marquee": [
     "DATOS",
     "ESTRATEGIA",
-    "TECNOLOG\u00cdA",
+    "TECNOLOGÍA",
     "DECISIONES",
-    "EJECUCI\u00d3N",
+    "EJECUCIÓN",
     "IMPACTO",
     "ESCUCHA SOCIAL",
     "EMBAJADORES",
     "AGENTES IA"
   ],
-
   "pillars": {
-    "eyebrow": "Pilares \u00b7 01",
+    "eyebrow": "Pilares · 01",
     "headlinePart1": "Tres pilares.",
-    "headlinePart2": "Una sola operaci\u00f3n.",
+    "headlinePart2": "Una sola operación.",
     "items": [
-      { "num": "/ 01", "title": "Datos.", "body": "Conectamos tus fuentes \u2014CRM, redes sociales, paid media, web analytics, escucha social\u2014 en un solo modelo de datos legible por tu equipo y por las plataformas que operamos contigo." },
-      { "num": "/ 02", "title": "Estrategia.", "body": "Sobre esos datos definimos hacia d\u00f3nde ir, con qu\u00e9 prioridades, en qu\u00e9 canales y con qu\u00e9 inversi\u00f3n. Documentos vivos, no PDFs muertos." },
-      { "num": "/ 03", "title": "Tecnolog\u00eda.", "body": "Implementamos y operamos las plataformas que ejecutan la estrategia: escucha social, gesti\u00f3n de redes, agentes virtuales con IA, dashboards de medici\u00f3n." }
+      {
+        "num": "/ 01",
+        "title": "Datos.",
+        "body": "Conectamos tus fuentes —CRM, redes sociales, paid media, web analytics, escucha social— en un solo modelo de datos legible por tu equipo y por las plataformas que operamos contigo."
+      },
+      {
+        "num": "/ 02",
+        "title": "Estrategia.",
+        "body": "Sobre esos datos definimos hacia dónde ir, con qué prioridades, en qué canales y con qué inversión. Documentos vivos, no PDFs muertos."
+      },
+      {
+        "num": "/ 03",
+        "title": "Tecnología.",
+        "body": "Implementamos y operamos las plataformas que ejecutan la estrategia: escucha social, gestión de redes, agentes virtuales con IA, dashboards de medición."
+      }
     ]
   },
-
   "soluciones": {
-    "eyebrow": "Soluciones \u00b7 02",
+    "eyebrow": "Soluciones · 02",
     "headlinePart1": "Lo que",
     "headlineAccent": "conectamos.",
-    "lede": "Siete soluciones dise\u00f1adas para integrarse en una sola operaci\u00f3n. Cada una sigue el mismo principio: <b style=\"color: var(--ink); font-weight: 500;\">data en la entrada, decisiones estrat\u00e9gicas en el medio, impacto medible en la salida</b>. Cuando termina la consultor\u00eda, queda operando.",
+    "lede": "Siete soluciones diseñadas para integrarse en una sola operación. Cada una sigue el mismo principio: <b style=\"color: var(--ink); font-weight: 500;\">data en la entrada, decisiones estratégicas en el medio, impacto medible en la salida</b>. Cuando termina la consultoría, queda operando.",
     "items": [
       {
         "num": "01 / SOCIAL LISTENING",
         "title": "Plataformas de <em>escucha social</em>.",
-        "body": "Implementamos y operamos plataformas de social listening que monitorean tu marca, tus competidores y tu industria en tiempo real, con cobertura global y an\u00e1lisis de sentimiento por idioma.",
-        "badge": "powered by Hootsuite \u00d7 Talkwalker"
+        "body": "Implementamos y operamos plataformas de social listening que monitorean tu marca, tus competidores y tu industria en tiempo real, con cobertura global y análisis de sentimiento por idioma.",
+        "badge": "powered by Hootsuite × Talkwalker"
       },
       {
         "num": "02 / SOCIAL MEDIA OPS",
-        "title": "Software de gesti\u00f3n de <em>redes sociales</em>.",
-        "body": "Desplegamos, configuramos y entrenamos a tu equipo en herramientas l\u00edderes para publicaci\u00f3n, calendarizaci\u00f3n editorial, atenci\u00f3n al cliente y reporting unificado entre canales. Operamos contigo en piloto antes de soltar.",
-        "badge": "powered by Hootsuite \u00d7 Talkwalker"
+        "title": "Software de gestión de <em>redes sociales</em>.",
+        "body": "Desplegamos, configuramos y entrenamos a tu equipo en herramientas líderes para publicación, calendarización editorial, atención al cliente y reporting unificado entre canales. Operamos contigo en piloto antes de soltar.",
+        "badge": "powered by Hootsuite × Talkwalker"
       },
       {
         "num": "03 / REPORTES BAJO DEMANDA",
         "title": "Reportes de <em>escucha</em> bajo demanda.",
-        "body": "Cuando necesitas un an\u00e1lisis espec\u00edfico \u2014lanzamiento, crisis, nuevo segmento, benchmark competitivo\u2014 entregamos un reporte profundo de social listening con insights accionables, no s\u00f3lo datos crudos.",
+        "body": "Cuando necesitas un análisis específico —lanzamiento, crisis, nuevo segmento, benchmark competitivo— entregamos un reporte profundo de social listening con insights accionables, no sólo datos crudos.",
         "badge": null
       },
       {
         "num": "04 / GOBERNANZA DIGITAL",
         "title": "Modelos de <em>gobernanza digital</em>.",
-        "body": "Dise\u00f1amos los protocolos, roles, m\u00e9tricas y aprobaciones que ordenan tu operaci\u00f3n digital: qui\u00e9n publica qu\u00e9, qui\u00e9n aprueba, c\u00f3mo se escala una crisis, c\u00f3mo se mide. Gobernanza ejecutable, no diagramas en PowerPoint.",
+        "body": "Diseñamos los protocolos, roles, métricas y aprobaciones que ordenan tu operación digital: quién publica qué, quién aprueba, cómo se escala una crisis, cómo se mide. Gobernanza ejecutable, no diagramas en PowerPoint.",
         "badge": null
       },
       {
         "num": "05 / ESTRATEGIA DIGITAL",
-        "title": "Consultor\u00eda de <em>estrategia digital</em>.",
-        "body": "Definimos y ejecutamos contigo la estrategia digital de tu empresa: hacia d\u00f3nde ir, con qu\u00e9 prioridades, en qu\u00e9 canales, con qu\u00e9 inversi\u00f3n y con qu\u00e9 KPIs. Y nos quedamos hasta que opera.",
+        "title": "Consultoría de <em>estrategia digital</em>.",
+        "body": "Definimos y ejecutamos contigo la estrategia digital de tu empresa: hacia dónde ir, con qué prioridades, en qué canales, con qué inversión y con qué KPIs. Y nos quedamos hasta que opera.",
         "badge": null
       },
       {
         "num": "06 / EMBAJADORES",
         "title": "Programa de <em>embajadores data-driven</em>.",
-        "body": "Identificamos \u2014con data, no con intuici\u00f3n\u2014 qui\u00e9nes son las personas con voz real para tu marca: empleados con red activa, clientes con audiencia, l\u00edderes de opini\u00f3n que ya hablan de tu vertical. Sobre esa evidencia dise\u00f1amos un programa de embajadores con m\u00e9tricas claras de alcance, engagement y conversi\u00f3n, y operamos contigo hasta que el cliente lo toma.",
+        "body": "Identificamos —con data, no con intuición— quiénes son las personas con voz real para tu marca: empleados con red activa, clientes con audiencia, líderes de opinión que ya hablan de tu vertical. Sobre esa evidencia diseñamos un programa de embajadores con métricas claras de alcance, engagement y conversión, y operamos contigo hasta que el cliente lo toma.",
         "badge": null
       },
       {
         "num": "07 / AI AGENTS",
-        "title": "Automatizaci\u00f3n con <em>agentes virtuales habilitados por IA</em>.",
-        "body": "Dise\u00f1amos e implementamos agentes virtuales con IA para atenci\u00f3n al cliente, calificaci\u00f3n de leads, soporte interno y procesos repetitivos. Con m\u00e9tricas claras de costo-beneficio desde el d\u00eda uno: cu\u00e1nto cuesta la operaci\u00f3n humana hoy, cu\u00e1nto cuesta automatizada, y d\u00f3nde tiene sentido empezar.",
+        "title": "Automatización con <em>agentes virtuales habilitados por IA</em>.",
+        "body": "Diseñamos e implementamos agentes virtuales con IA para atención al cliente, calificación de leads, soporte interno y procesos repetitivos. Con métricas claras de costo-beneficio desde el día uno: cuánto cuesta la operación humana hoy, cuánto cuesta automatizada, y dónde tiene sentido empezar.",
         "badge": null
       }
     ]
   },
-
   "alianzas": {
-    "eyebrow": "Alianzas estrat\u00e9gicas \u00b7 03",
+    "eyebrow": "Alianzas estratégicas · 03",
     "headlinePart1": "El",
     "headlineAccent": "stack",
     "headlinePart2": "que opera contigo.",
-    "lede": "XP3 trabaja como hub. No reinventamos la rueda: integramos a las mejores plataformas y socios del mercado en una operaci\u00f3n coordinada. Estos son los dos socios estrat\u00e9gicos que potencian cada proyecto.",
+    "lede": "XP3 trabaja como hub. No reinventamos la rueda: integramos a las mejores plataformas y socios del mercado en una operación coordinada. Estos son los dos socios estratégicos que potencian cada proyecto.",
     "items": [
       {
         "category": "DATA",
         "badge": "Certified Partner",
-        "tagline": "Anal\u00edtica de datos \u00b7 Modelos de medici\u00f3n",
-        "title": "Socio estrat\u00e9gico de <em>anal\u00edtica de datos</em>.",
-        "body": "Con Artool integramos modelos avanzados de anal\u00edtica al stack de cada cliente. Convertimos vol\u00famenes dispersos de datos \u2014CRM, redes, web analytics, paid media, escucha social\u2014 en un modelo unificado que un comit\u00e9 directivo entiende a la primera y un equipo operativo puede usar todos los d\u00edas.",
+        "tagline": "Analítica de datos · Modelos de medición",
+        "title": "Socio estratégico de <em>analítica de datos</em>.",
+        "body": "Con Artool integramos modelos avanzados de analítica al stack de cada cliente. Convertimos volúmenes dispersos de datos —CRM, redes, web analytics, paid media, escucha social— en un modelo unificado que un comité directivo entiende a la primera y un equipo operativo puede usar todos los días.",
         "specs": [
-          { "label": "Atribuci\u00f3n",  "value": "multitouch + incrementalidad" },
-          { "label": "Modelado",       "value": "predictivo y causal" },
-          { "label": "Integraci\u00f3n", "value": "al stack del cliente" },
-          { "label": "Entrega",         "value": "dashboards operativos" }
+          {
+            "label": "Atribución",
+            "value": "multitouch + incrementalidad"
+          },
+          {
+            "label": "Modelado",
+            "value": "predictivo y causal"
+          },
+          {
+            "label": "Integración",
+            "value": "al stack del cliente"
+          },
+          {
+            "label": "Entrega",
+            "value": "dashboards operativos"
+          }
         ]
       },
       {
         "category": "SOCIAL",
         "badge": "Certified Partner",
-        "tagline": "Social listening + management \u00b7 partner certificado",
-        "title": "Plataforma global de <em>gesti\u00f3n y escucha social</em>.",
-        "body": "Hootsuite powered by Talkwalker es la plataforma l\u00edder global de gesti\u00f3n de redes sociales y social listening. Como partner XP3 implementa, opera y maximiza la inversi\u00f3n de cada cliente en esta tecnolog\u00eda: desde el setup t\u00e9cnico hasta el reporting ejecutivo.",
+        "tagline": "Social listening + management · partner certificado",
+        "title": "Plataforma global de <em>gestión y escucha social</em>.",
+        "body": "Hootsuite powered by Talkwalker es la plataforma líder global de gestión de redes sociales y social listening. Como partner XP3 implementa, opera y maximiza la inversión de cada cliente en esta tecnología: desde el setup técnico hasta el reporting ejecutivo.",
         "specs": [
-          { "label": "Cobertura",  "value": "+150M fuentes globales" },
-          { "label": "Idiomas",    "value": "an\u00e1lisis multiling\u00fce" },
-          { "label": "Sentiment",  "value": "IA de Talkwalker" },
-          { "label": "Operaci\u00f3n", "value": "gestionada por XP3" }
+          {
+            "label": "Cobertura",
+            "value": "+150M fuentes globales"
+          },
+          {
+            "label": "Idiomas",
+            "value": "análisis multilingüe"
+          },
+          {
+            "label": "Sentiment",
+            "value": "IA de Talkwalker"
+          },
+          {
+            "label": "Operación",
+            "value": "gestionada por XP3"
+          }
         ]
       }
     ]
   },
-
   "promise": {
-    "eyebrow": "Promesa \u00b7 04",
-    "quote": "No solo te decimos <span class=\"x\">/</span> qu\u00e9 hacer. Te <em>acompa\u00f1amos</em> y <em>ejecutamos</em>.",
+    "eyebrow": "Promesa · 04",
+    "quote": "No solo te decimos <span class=\"x\">/</span> qué hacer. Te <em>acompañamos</em> y <em>ejecutamos</em>.",
     "steps": [
-      { "label": "01 \u2192 Conectar", "title": "<em>Conectamos</em> los datos.",     "body": "Auditamos tu stack actual, integramos fuentes, dejamos un modelo de datos limpio y operable." },
-      { "label": "02 \u2192 Definir",  "title": "<em>Definimos</em> la estrategia.",  "body": "Hip\u00f3tesis claras, prioridades por impacto vs esfuerzo, KPIs publicados y compartidos con tu equipo." },
-      { "label": "03 \u2192 Operar",   "title": "<em>Operamos</em> contigo.",         "body": "Implementamos y operamos las plataformas (Hootsuite \u00d7 Talkwalker, agentes IA, dashboards). Hacemos hand-over cuando tu equipo est\u00e1 listo." },
-      { "label": "04 \u2192 Iterar",   "title": "<em>Iteramos</em> con datos.",       "body": "Lecturas semanales, decisiones quincenales, replanteamiento mensual. La estrategia es viva." }
-    ]
-  },
-
-  "faq": {
-    "eyebrow": "Preguntas \u00b7 05",
-    "headlinePart1": "Lo que m\u00e1s",
-    "headlineAccent": "nos preguntan.",
-    "lede": "Si te queda alguna pregunta sin responder despu\u00e9s de leer esto, escr\u00edbenos directo a contacto@xp3.com.mx. Las preguntas de los primeros d\u00edas definen mejor un proyecto que cualquier brief.",
-    "items": [
       {
-        "q": "\u00bfQu\u00e9 es XP3 Marketing?",
-        "a": "XP3 es una consultor\u00eda de marketing digital que opera como hub: conecta datos, estrategia y tecnolog\u00eda en una sola operaci\u00f3n. A diferencia de las agencias tradicionales, XP3 no se queda en el plan estrat\u00e9gico \u2014 acompa\u00f1a al cliente en la ejecuci\u00f3n, opera junto a \u00e9l e integra a un ecosistema de socios tecnol\u00f3gicos como Artool y Hootsuite \u00d7 Talkwalker."
+        "label": "01 → Conectar",
+        "title": "<em>Conectamos</em> los datos.",
+        "body": "Auditamos tu stack actual, integramos fuentes, dejamos un modelo de datos limpio y operable."
       },
       {
-        "q": "\u00bfCu\u00e1les son las alianzas estrat\u00e9gicas de XP3?",
-        "a": "XP3 opera con dos alianzas estrat\u00e9gicas centrales. <b>Artool</b> es nuestro socio en anal\u00edtica de datos avanzada, con quien integramos modelos de medici\u00f3n al stack de cada cliente. <b>Hootsuite powered by Talkwalker</b> es la plataforma global l\u00edder en gesti\u00f3n de redes sociales y escucha social, donde XP3 act\u00faa como partner de implementaci\u00f3n y operaci\u00f3n en M\u00e9xico y LATAM."
+        "label": "02 → Definir",
+        "title": "<em>Definimos</em> la estrategia.",
+        "body": "Hipótesis claras, prioridades por impacto vs esfuerzo, KPIs publicados y compartidos con tu equipo."
       },
       {
-        "q": "\u00bfQu\u00e9 soluciones ofrece XP3?",
-        "a": "Siete soluciones conectadas: plataformas de escucha social, software de gesti\u00f3n de redes sociales, reportes de escucha social bajo demanda, modelos de gobernanza digital, consultor\u00eda para definir y ejecutar la estrategia digital de tu empresa, programa de embajadores data-driven, y automatizaci\u00f3n de agentes virtuales habilitados por IA."
+        "label": "03 → Operar",
+        "title": "<em>Operamos</em> contigo.",
+        "body": "Implementamos y operamos las plataformas (Hootsuite × Talkwalker, agentes IA, dashboards). Hacemos hand-over cuando tu equipo está listo."
       },
       {
-        "q": "\u00bfC\u00f3mo dise\u00f1a XP3 un programa de embajadores?",
-        "a": "El proceso comienza con un an\u00e1lisis de redes sociales y data interna del cliente para identificar \u2014con evidencia, no con intuici\u00f3n\u2014 qui\u00e9nes son las personas con voz real para la marca: <b>empleados con red activa</b>, <b>clientes con audiencia</b>, <b>l\u00edderes de opini\u00f3n</b> que ya hablan de tu vertical. Sobre esa identificaci\u00f3n construimos un programa de embajadores con m\u00e9tricas claras de alcance, engagement y conversi\u00f3n. La operaci\u00f3n queda gestionada por XP3 hasta que el equipo del cliente est\u00e1 listo para tomarla."
-      },
-      {
-        "q": "\u00bfQu\u00e9 hace diferente a XP3 de otras consultoras de marketing digital?",
-        "a": "Tres cosas: opera como <b>hub</b> que integra datos, estrategia y tecnolog\u00eda en una sola operaci\u00f3n \u2014no servicios sueltos\u2014; <b>ejecuta junto al cliente</b> y no s\u00f3lo entrega un plan; y trabaja con <b>alianzas tecnol\u00f3gicas estrat\u00e9gicas</b> (Artool, Hootsuite \u00d7 Talkwalker) que potencian cada proyecto sin que el cliente tenga que negociar contratos por separado."
-      },
-      {
-        "q": "\u00bfXP3 atiende s\u00f3lo clientes en M\u00e9xico?",
-        "a": "XP3 est\u00e1 basada en M\u00e9xico y atiende principalmente al mercado mexicano, pero tambi\u00e9n trabaja con clientes regionales en LATAM y operaciones de marcas internacionales con presencia en la regi\u00f3n. Trabajamos en espa\u00f1ol e ingl\u00e9s."
-      },
-      {
-        "q": "\u00bfXP3 s\u00f3lo entrega un plan estrat\u00e9gico o tambi\u00e9n ejecuta?",
-        "a": "Ambos. La promesa central de XP3 es: <em>\u201cNo solo te decimos qu\u00e9 hacer, te acompa\u00f1amos y ejecutamos.\u201d</em> La consultor\u00eda incluye la implementaci\u00f3n de la estrategia con el equipo del cliente, la operaci\u00f3n de las plataformas tecnol\u00f3gicas (escucha social, gesti\u00f3n de redes, agentes IA) y la medici\u00f3n continua de resultados."
-      },
-      {
-        "q": "\u00bfC\u00f3mo funcionan los agentes virtuales con IA que ofrece XP3?",
-        "a": "Dise\u00f1amos e implementamos agentes virtuales habilitados por IA para casos de uso espec\u00edficos: atenci\u00f3n al cliente en redes sociales y WhatsApp, calificaci\u00f3n de leads en sitios web, soporte interno para empleados, y automatizaci\u00f3n de procesos repetitivos. Cada implementaci\u00f3n parte de un an\u00e1lisis de costo-beneficio claro: cu\u00e1nto cuesta la operaci\u00f3n humana hoy, cu\u00e1nto cuesta automatizada y d\u00f3nde tiene sentido empezar."
+        "label": "04 → Iterar",
+        "title": "<em>Iteramos</em> con datos.",
+        "body": "Lecturas semanales, decisiones quincenales, replanteamiento mensual. La estrategia es viva."
       }
     ]
   },
-
+  "faq": {
+    "eyebrow": "Preguntas · 05",
+    "headlinePart1": "Lo que más",
+    "headlineAccent": "nos preguntan.",
+    "lede": "Si te queda alguna pregunta sin responder después de leer esto, escríbenos directo a contacto@xp3.com.mx. Las preguntas de los primeros días definen mejor un proyecto que cualquier brief.",
+    "items": [
+      {
+        "q": "¿Qué es XP3 Marketing?",
+        "a": "XP3 es una consultoría de marketing digital que opera como hub: conecta datos, estrategia y tecnología en una sola operación. A diferencia de las agencias tradicionales, XP3 no se queda en el plan estratégico — acompaña al cliente en la ejecución, opera junto a él e integra a un ecosistema de socios tecnológicos como Artool y Hootsuite × Talkwalker."
+      },
+      {
+        "q": "¿Cuáles son las alianzas estratégicas de XP3?",
+        "a": "XP3 opera con dos alianzas estratégicas centrales. <b>Artool</b> es nuestro socio en analítica de datos avanzada, con quien integramos modelos de medición al stack de cada cliente. <b>Hootsuite powered by Talkwalker</b> es la plataforma global líder en gestión de redes sociales y escucha social, donde XP3 actúa como partner de implementación y operación en México y LATAM."
+      },
+      {
+        "q": "¿Qué soluciones ofrece XP3?",
+        "a": "Siete soluciones conectadas: plataformas de escucha social, software de gestión de redes sociales, reportes de escucha social bajo demanda, modelos de gobernanza digital, consultoría para definir y ejecutar la estrategia digital de tu empresa, programa de embajadores data-driven, y automatización de agentes virtuales habilitados por IA."
+      },
+      {
+        "q": "¿Cómo diseña XP3 un programa de embajadores?",
+        "a": "El proceso comienza con un análisis de redes sociales y data interna del cliente para identificar —con evidencia, no con intuición— quiénes son las personas con voz real para la marca: <b>empleados con red activa</b>, <b>clientes con audiencia</b>, <b>líderes de opinión</b> que ya hablan de tu vertical. Sobre esa identificación construimos un programa de embajadores con métricas claras de alcance, engagement y conversión. La operación queda gestionada por XP3 hasta que el equipo del cliente está listo para tomarla."
+      },
+      {
+        "q": "¿Qué hace diferente a XP3 de otras consultoras de marketing digital?",
+        "a": "Tres cosas: opera como <b>hub</b> que integra datos, estrategia y tecnología en una sola operación —no servicios sueltos—; <b>ejecuta junto al cliente</b> y no sólo entrega un plan; y trabaja con <b>alianzas tecnológicas estratégicas</b> (Artool, Hootsuite × Talkwalker) que potencian cada proyecto sin que el cliente tenga que negociar contratos por separado."
+      },
+      {
+        "q": "¿XP3 atiende sólo clientes en México?",
+        "a": "XP3 está basada en México y atiende principalmente al mercado mexicano, pero también trabaja con clientes regionales en LATAM y operaciones de marcas internacionales con presencia en la región. Trabajamos en español e inglés."
+      },
+      {
+        "q": "¿XP3 sólo entrega un plan estratégico o también ejecuta?",
+        "a": "Ambos. La promesa central de XP3 es: <em>“No solo te decimos qué hacer, te acompañamos y ejecutamos.”</em> La consultoría incluye la implementación de la estrategia con el equipo del cliente, la operación de las plataformas tecnológicas (escucha social, gestión de redes, agentes IA) y la medición continua de resultados."
+      },
+      {
+        "q": "¿Cómo funcionan los agentes virtuales con IA que ofrece XP3?",
+        "a": "Diseñamos e implementamos agentes virtuales habilitados por IA para casos de uso específicos: atención al cliente en redes sociales y WhatsApp, calificación de leads en sitios web, soporte interno para empleados, y automatización de procesos repetitivos. Cada implementación parte de un análisis de costo-beneficio claro: cuánto cuesta la operación humana hoy, cuánto cuesta automatizada y dónde tiene sentido empezar."
+      }
+    ]
+  },
   "cta": {
     "eyebrow": "Conversemos",
-    "headline": "Si tu marca tiene los datos pero no la operaci\u00f3n digital que los convierta en <em>impacto</em>, hablemos.",
-    "ctaPrimary": "Agendar diagn\u00f3stico",
+    "headline": "Si tu marca tiene los datos pero no la operación digital que los convierta en <em>impacto</em>, hablemos.",
+    "ctaPrimary": "Agendar diagnóstico",
     "ctaSecondary": "contacto@xp3.com.mx"
   },
-
   "footer": {
-    "tagline": "Hub digital de marketing. Conectamos datos, estrategia y tecnolog\u00eda para que cada decisi\u00f3n genere impacto exponencial. Partners de Artool y Hootsuite \u00d7 Talkwalker.",
+    "tagline": "Hub digital de marketing. Conectamos datos, estrategia y tecnología para que cada decisión genere impacto exponencial. Partners de Artool y Hootsuite × Talkwalker.",
     "columns": [
       {
         "title": "Sitio",
         "links": [
-          { "text": "Soluciones", "href": "#soluciones" },
-          { "text": "Alianzas",   "href": "#alianzas" },
-          { "text": "M\u00e9todo",   "href": "#metodo" },
-          { "text": "Preguntas",  "href": "#preguntas" }
+          {
+            "text": "Soluciones",
+            "href": "#soluciones"
+          },
+          {
+            "text": "Alianzas",
+            "href": "#alianzas"
+          },
+          {
+            "text": "Método",
+            "href": "#metodo"
+          },
+          {
+            "text": "Preguntas",
+            "href": "#preguntas"
+          }
         ]
       },
       {
         "title": "Contacto",
         "links": [
-          { "text": "contacto@xp3.com.mx", "href": "mailto:contacto@xp3.com.mx" },
-          { "text": "partners@xp3.com.mx", "href": "mailto:partners@xp3.com.mx" },
-          { "text": "prensa@xp3.com.mx",   "href": "mailto:prensa@xp3.com.mx" }
+          {
+            "text": "contacto@xp3.com.mx",
+            "href": "mailto:contacto@xp3.com.mx"
+          },
+          {
+            "text": "partners@xp3.com.mx",
+            "href": "mailto:partners@xp3.com.mx"
+          },
+          {
+            "text": "prensa@xp3.com.mx",
+            "href": "mailto:prensa@xp3.com.mx"
+          }
         ]
       },
       {
         "title": "Social",
         "links": [
-          { "text": "LinkedIn \u2197",  "href": "https://www.linkedin.com/company/xp3-marketing" },
-          { "text": "Instagram \u2197", "href": "https://www.instagram.com/xp3.marketing" }
+          {
+            "text": "LinkedIn ↗",
+            "href": "https://www.linkedin.com/company/xp3-marketing"
+          },
+          {
+            "text": "Instagram ↗",
+            "href": "https://www.instagram.com/xp3.marketing"
+          }
         ]
       }
     ],
     "metaLine": [
-      "\u00a9 2026 XP3 Marketing \u00b7 todos los derechos reservados",
-      "M\u00e9xico \u00b7 LATAM",
+      "© 2026 XP3 Marketing · todos los derechos reservados",
+      "México · LATAM",
       "built as a hub"
     ]
   },
-
   "chat": {
     "trigger_label": "Pregunta a XP3",
     "modes": {
       "xp3": {
-        "title":       "Asistente XP3",
-        "status":      "online \u00b7 habilitado por IA",
-        "disclaimer":  "Habilitado por IA <b>\u00b7 conversaci\u00f3n segura</b>",
-        "placeholder": "Preg\u00fantame sobre XP3, alianzas, soluciones\u2026",
-        "greeting":    "Hola \ud83d\udc4b Soy el asistente de XP3. Puedo contarte sobre nuestras soluciones, las alianzas con **Artool** y **Hootsuite \u00d7 Talkwalker**, o c\u00f3mo trabajamos. \u00bfEn qu\u00e9 te ayudo?",
+        "title": "Asistente XP3",
+        "status": "online · habilitado por IA",
+        "disclaimer": "Habilitado por IA <b>· conversación segura</b>",
+        "placeholder": "Pregúntame sobre XP3, alianzas, soluciones…",
+        "greeting": "Hola 👋 Soy el asistente de XP3. Puedo contarte sobre nuestras soluciones, las alianzas con **Artool** y **Hootsuite × Talkwalker**, o cómo trabajamos. ¿En qué te ayudo?",
         "suggestions": [
-          "\u00bfQu\u00e9 es XP3?",
-          "\u00bfC\u00f3mo funciona la alianza con Hootsuite \u00d7 Talkwalker?",
-          "\u00bfQu\u00e9 soluciones ofrecen?",
-          "Cu\u00e9ntame sobre el programa de embajadores",
-          "Quiero agendar un diagn\u00f3stico"
+          "¿Qué es XP3?",
+          "¿Cómo funciona la alianza con Hootsuite × Talkwalker?",
+          "¿Qué soluciones ofrecen?",
+          "Cuéntame sobre el programa de embajadores",
+          "Quiero agendar un diagnóstico"
         ]
       },
       "trends": {
-        "title":       "Tendencias \u00b7 live",
-        "status":      "live \u00b7 datos en tiempo real",
-        "disclaimer":  "Datos en vivo <b>\u00b7 web search en tiempo real</b>",
-        "placeholder": "Preg\u00fantame qu\u00e9 est\u00e1 pasando en marketing digital ahora\u2026",
-        "greeting":    "**Modo tendencias activo.** Estoy conectada al web en tiempo real para responder qu\u00e9 est\u00e1 pasando AHORA en marketing digital, redes sociales, herramientas, comportamiento del consumidor. Las respuestas vienen con fuentes citadas que pod\u00e9s clickear.",
+        "title": "Tendencias · live",
+        "status": "live · datos en tiempo real",
+        "disclaimer": "Datos en vivo <b>· web search en tiempo real</b>",
+        "placeholder": "Pregúntame qué está pasando en marketing digital ahora…",
+        "greeting": "**Modo tendencias activo.** Estoy conectada al web en tiempo real para responder qué está pasando AHORA en marketing digital, redes sociales, herramientas, comportamiento del consumidor. Las respuestas vienen con fuentes citadas que podés clickear.",
         "suggestions": [
-          "\u00bfQu\u00e9 tendencias hay esta semana en TikTok ads?",
-          "\u00daltimos updates de Hootsuite y Talkwalker",
-          "\u00bfQu\u00e9 dice el mercado sobre IA generativa en marketing?",
+          "¿Qué tendencias hay esta semana en TikTok ads?",
+          "Últimos updates de Hootsuite y Talkwalker",
+          "¿Qué dice el mercado sobre IA generativa en marketing?",
           "Tendencias de social listening en LATAM 2026",
           "Cambios recientes en Google Ads"
         ]
       }
     },
-    "errorMessage": "Hubo un problema conectando con el asistente. Escr\u00edbenos directo a contacto@xp3.com.mx mientras lo resolvemos."
+    "errorMessage": "Hubo un problema conectando con el asistente. Escríbenos directo a contacto@xp3.com.mx mientras lo resolvemos."
   },
-
   "contact": {
-    "general":  "contacto@xp3.com.mx",
+    "general": "contacto@xp3.com.mx",
     "partners": "partners@xp3.com.mx",
-    "press":    "prensa@xp3.com.mx"
+    "press": "prensa@xp3.com.mx"
   }
 }
