@@ -1995,10 +1995,10 @@
   // Each mode keeps its own conversation history; switching tabs swaps the visible thread.
   (function() {
     // Backend endpoint(s) — set ONE of:
-    //   const API_ENDPOINT = "/api/chat";                                    // same origin (Cloudflare Pages + Workers)
+    //   const API_ENDPOINT = "https://agent.xp3.com.mx/api/chat";                                    // same origin (Cloudflare Pages + Workers)
     //   const API_ENDPOINT = "https://agent.xp3.com.mx/api/chat";            // custom subdomain
     //   const API_ENDPOINT = "https://xp3-agent-production.up.railway.app/api/chat";  // Railway
-    const API_ENDPOINT = "/api/chat";
+    const API_ENDPOINT = "https://agent.xp3.com.mx/api/chat";
 
     // Anonymous session ID — groups multiple turns of the same conversation
     // for analytics. Stored in sessionStorage so it resets when the browser
