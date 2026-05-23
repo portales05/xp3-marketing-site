@@ -16,7 +16,7 @@
       "Los emails se editan en la sección 'contact' al final."
     ],
     "version": "1.0",
-    "actualizado": "2026-05-08"
+    "actualizado": "2026-05-09"
   },
   "meta": {
     "title": "XP3 Marketing — Hub digital · Consultoría que conecta datos, estrategia y tecnología",
@@ -301,7 +301,7 @@
   },
   "cta": {
     "eyebrow": "Conversemos",
-    "headline": "Convertimos tus datos en <em>decisiones</em> <em>estratégicas</em> de alto <em>impacto</em>, hablemos.",
+    "headline": "Si tu marca tiene los datos pero no la operación digital que los convierta en <em>impacto</em>, hablemos.",
     "ctaPrimary": "Agendar diagnóstico",
     "ctaSecondary": "contacto@xp3.com.mx"
   },
@@ -379,6 +379,8 @@
           "¿Qué es XP3?",
           "¿Cómo funciona la alianza con Hootsuite × Talkwalker?",
           "¿Qué soluciones ofrecen?",
+          "¿Quieres proteger tu reputación digital?",
+          "¿Están protegidos tus activos digitales?",
           "Cuéntame sobre el programa de embajadores",
           "Quiero agendar un diagnóstico"
         ]
