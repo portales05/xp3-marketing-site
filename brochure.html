@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>XP3 — Brochure · Hub digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0A0A0B; --bg-elev:#111114; --bg-card:#16161A;
+    --line:#25252A; --line-soft:#1C1C20;
+    --ink:#F4F4EE; --ink-mute:#8E8E88; --ink-faint:#5A5A55;
+    --accent:#00E5FF; --accent-dim:#00A6BB; --accent-glow:rgba(0,229,255,.16);
+    --data:#C7F731; --data-glow:rgba(199,247,49,.18);
+    --warm:#FF5C26;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"DM Sans",-apple-system,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+    --s:1;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#000;}
+  body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+
+  .deck{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;scroll-behavior:smooth;}
+  .deck::-webkit-scrollbar{display:none;}
+  .viewport{height:100vh;width:100vw;display:flex;align-items:center;justify-content:center;
+    overflow:hidden;scroll-snap-align:center;scroll-snap-stop:always;background:#000;}
+
+  .stage{width:1280px;height:720px;flex:0 0 auto;position:relative;
+    transform:scale(var(--s));transform-origin:center center;background:var(--bg);overflow:hidden; --pad:56px;}
+  .stage::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:linear-gradient(to right,rgba(255,255,255,.024) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.024) 1px,transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(ellipse at 50% 45%,#000 35%,transparent 82%);mask-image:radial-gradient(ellipse at 50% 45%,#000 35%,transparent 82%);}
+  .stage::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.35;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");}
+  .inner{position:absolute;inset:0;z-index:2;padding:26px var(--pad) 30px;display:flex;flex-direction:column;}
+
+  .tick{position:absolute;width:14px;height:14px;border:0 solid var(--accent);opacity:.55;z-index:5;}
+  .tick.tl{top:16px;left:16px;border-top-width:1px;border-left-width:1px;}
+  .tick.tr{top:16px;right:16px;border-top-width:1px;border-right-width:1px;}
+  .tick.bl{bottom:16px;left:16px;border-bottom-width:1px;border-left-width:1px;}
+  .tick.br{bottom:16px;right:16px;border-bottom-width:1px;border-right-width:1px;}
+
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);
+    padding-bottom:14px;border-bottom:1px solid var(--line-soft);position:relative;z-index:3;}
+  .topbar .l{display:flex;align-items:center;gap:9px;color:var(--ink);}
+  .topbar .c{color:var(--ink-faint);} .topbar .r{color:var(--ink-faint);} .topbar .r b{color:var(--accent);font-weight:500;}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 9px var(--accent);animation:pulse 1.7s cubic-bezier(.2,.7,.2,1) infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.35;transform:scale(.65);}}
+
+  .eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:9px;}
+  .eyebrow::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:1;margin:0;}
+  .it{font-style:italic;} .cy{color:var(--accent);} .da{color:var(--data);}
+
+  /* network */
+  .net{position:absolute;inset:0;width:100%;height:100%;}
+  .net text{font-family:var(--mono);}
+
+  /* ───────── F0 · PORTADA ───────── */
+  .f0 .cov{flex:1;display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center;}
+  .f0 .wm{font-family:var(--serif);font-size:130px;line-height:.82;letter-spacing:-.045em;margin-top:6px;}
+  .f0 .kln{font-family:var(--mono);font-size:12px;letter-spacing:.4em;color:var(--accent);margin-top:16px;text-transform:uppercase;}
+  .f0 .tag{font-family:var(--serif);font-size:25px;line-height:1.24;color:var(--ink);margin-top:26px;max-width:23ch;}
+  .f0 .tag i{color:var(--accent);font-style:italic;}
+  .f0 .covmeta{padding-top:15px;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);position:relative;z-index:3;}
+  .f0 .covmeta b{color:var(--ink-mute);font-weight:500;}
+  .covpanel{position:relative;height:430px;border:1px solid var(--line);border-radius:3px;overflow:hidden;
+    background:radial-gradient(circle at 55% 45%,var(--data-glow),transparent 62%),var(--bg-elev);}
+  .covpanel .corner{position:absolute;width:12px;height:12px;border:0 solid var(--accent);}
+  .covpanel .corner.tl{top:9px;left:9px;border-top-width:1px;border-left-width:1px;}
+  .covpanel .corner.tr{top:9px;right:9px;border-top-width:1px;border-right-width:1px;}
+  .covpanel .corner.bl{bottom:9px;left:9px;border-bottom-width:1px;border-left-width:1px;}
+  .covpanel .corner.br{bottom:9px;right:9px;border-bottom-width:1px;border-right-width:1px;}
+  .covpanel .hud{position:absolute;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);z-index:3;}
+  .covpanel .hud b{color:var(--accent);} .covpanel .hud.tl{top:14px;left:18px;} .covpanel .hud.tr{top:14px;right:18px;color:var(--data);}
+  .covpanel .hud.bl{bottom:14px;left:18px;} .covpanel .hud.br{bottom:14px;right:18px;}
+
+  /* ───────── F1 ───────── */
+  .f1 .hero{display:grid;grid-template-columns:1fr 320px;gap:40px;margin-top:18px;align-items:start;}
+  .f1 h1{font-size:70px;letter-spacing:-.04em;margin-top:10px;}
+  .f1 .lede{font-size:16px;line-height:1.48;color:var(--ink-mute);max-width:46ch;margin:16px 0 0;}
+  .f1 .promise{font-family:var(--serif);font-size:19px;line-height:1.25;margin-top:14px;color:var(--ink);max-width:30ch;}
+  .f1 .promise i{color:var(--accent);font-style:italic;}
+  .panel{border:1px solid var(--line);background:radial-gradient(circle at 60% 38%,var(--data-glow),transparent 60%),var(--bg-elev);
+    border-radius:3px;position:relative;height:200px;overflow:hidden;}
+  .panel .corner{position:absolute;width:10px;height:10px;border:0 solid var(--accent);}
+  .panel .corner.tl{top:7px;left:7px;border-top-width:1px;border-left-width:1px;}
+  .panel .corner.br{bottom:7px;right:7px;border-bottom-width:1px;border-right-width:1px;}
+  .panel .hud{position:absolute;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);z-index:3;}
+  .panel .hud b{color:var(--accent);font-weight:500;}
+  .panel .hud.t{top:11px;left:16px;} .panel .hud.b{bottom:11px;left:16px;} .panel .hud.br2{bottom:11px;right:16px;color:var(--data);}
+  .marquee{margin-top:16px;padding:9px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+    font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-faint);display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
+  .marquee i{color:var(--accent);font-style:normal;font-size:7px;vertical-align:middle;}
+  .pillars{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);position:relative;}
+  .pillars .spine{position:absolute;top:-1px;left:0;right:0;height:1px;background:var(--data);opacity:.5;}
+  .pillars .node{position:absolute;top:-4px;width:7px;height:7px;border-radius:50%;background:var(--bg);border:1px solid var(--accent);}
+  .pillars .node.n1{left:calc(16.6% - 3px);} .pillars .node.n2{left:calc(50% - 3px);background:var(--data);border-color:var(--data);box-shadow:0 0 10px var(--data-glow);} .pillars .node.n3{left:calc(83.3% - 3px);}
+  .pillar{padding:14px 22px 16px;border-right:1px solid var(--line);position:relative;}
+  .pillar:last-child{border-right:none;}
+  .pillar .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);display:flex;justify-content:space-between;}
+  .pillar .k .verb{color:var(--data);}
+  .pillar h3{font-size:27px;font-style:italic;color:var(--accent);margin-top:10px;}
+  .pillar p{font-size:12px;line-height:1.42;color:var(--ink-mute);margin:9px 0 0;}
+  .f1 .footnote{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);display:flex;justify-content:space-between;align-items:center;}
+  .f1 .footnote b{color:var(--ink);font-weight:500;}
+
+  /* ───────── F2 ───────── */
+  .f2 .head{margin-top:18px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:end;}
+  .f2 h2{font-size:46px;letter-spacing:-.03em;margin-top:12px;}
+  .f2 .lede{font-size:14.5px;line-height:1.5;color:var(--ink-mute);max-width:42ch;}
+  .f2 .lede b{color:var(--ink);font-weight:600;}
+  .loop{margin-top:0;display:flex;align-items:stretch;border:1px solid var(--line);background:var(--bg-elev);}
+  .f2 .loopwrap{flex:1;display:flex;flex-direction:column;justify-content:center;}
+  .lnode{flex:1;padding:18px 16px 16px;position:relative;display:flex;flex-direction:column;gap:7px;}
+  .lnode .gl{width:26px;height:26px;}
+  .lnode .gl path,.lnode .gl circle,.lnode .gl line,.lnode .gl rect,.lnode .gl polyline{stroke:var(--accent);stroke-width:1.4;fill:none;}
+  .lnode.edge .gl path,.lnode.edge .gl circle,.lnode.edge .gl line,.lnode.edge .gl rect,.lnode.edge .gl polyline{stroke:var(--data);}
+  .lnode .k{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);}
+  .lnode h3{font-size:20px;color:var(--accent);} .lnode.edge h3{color:var(--data);font-style:italic;}
+  .lnode p{font-size:11px;line-height:1.4;color:var(--ink-mute);margin:0;}
+  .larrow{flex:0 0 32px;display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:16px;border-left:1px solid var(--line-soft);border-right:1px solid var(--line-soft);}
+  .loopback{border:1px solid var(--line);border-top:none;background:rgba(199,247,49,.04);padding:10px 18px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:center;gap:10px;}
+  .loopback b{color:var(--data);font-weight:500;} .loopback .cyc{color:var(--data);font-size:14px;}
+  .creates{margin-top:0;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--line-soft);}
+  .creates .lab{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);}
+  .chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--bg-card);}
+  .f2 .ev{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--ink-faint);}
+  .f2 .ev b{color:var(--data);font-weight:500;}
+
+  /* ───────── F3 ───────── */
+  .f3 .head{margin-top:18px;}
+  .f3 h2{font-size:43px;letter-spacing:-.03em;margin-top:12px;}
+  .f3 .head .lede{font-size:14px;line-height:1.5;color:var(--ink-mute);max-width:66ch;margin-top:12px;}
+  .f3 .head .lede b{color:var(--ink);font-weight:600;}
+  .f3 .body{margin-top:18px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start;}
+  .mock{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--bg-card);box-shadow:0 24px 60px rgba(0,0,0,.5);}
+  .mock .bar{display:flex;align-items:center;gap:14px;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--bg-elev);}
+  .mock .traffic{display:flex;gap:6px;} .mock .traffic span{width:9px;height:9px;border-radius:50%;background:var(--line);}
+  .mock .brand{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);}
+  .mock .brand b{color:var(--data);}
+  .mock .tabs{display:flex;gap:18px;margin-left:8px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+  .mock .tabs .on{color:var(--accent);position:relative;}
+  .mock .tabs .on::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:2px;background:var(--accent);}
+  .mock .agt{margin-left:auto;display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);}
+  .mock .agt b{color:var(--data);}
+  .mock .agt .sw{width:22px;height:12px;border-radius:7px;background:rgba(199,247,49,.16);border:1px solid var(--data);position:relative;}
+  .mock .agt .sw::after{content:"";position:absolute;top:1px;right:1px;width:8px;height:8px;border-radius:50%;background:var(--data);box-shadow:0 0 6px var(--data);}
+  .mock .scr{padding:16px;}
+  .mock .scr .ttl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;}
+  .mtiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;}
+  .mtile{border:1px solid var(--line);border-radius:4px;padding:9px 10px;background:var(--bg);}
+  .mtile .kk{font-family:var(--mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+  .mtile .vv{font-family:var(--serif);font-size:24px;color:var(--ink);margin-top:3px;line-height:1;}
+  .mtile.acc .vv{color:var(--data);}
+  .funnel{display:flex;flex-direction:column;gap:9px;}
+  .frow{display:flex;align-items:center;gap:10px;}
+  .frow .fl{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);width:118px;flex:0 0 auto;}
+  .frow .ftrk{flex:1;height:8px;background:var(--bg);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+  .frow .ffill{height:100%;background:var(--accent);opacity:.85;}
+  .frow:last-child .ffill{background:var(--data);}
+  .frow .fp{font-family:var(--mono);font-size:9.5px;color:var(--ink-faint);width:42px;text-align:right;flex:0 0 auto;}
+  .f3 .mockcap{font-size:11.5px;line-height:1.45;color:var(--ink-mute);margin-top:12px;}
+  .f3 .mockcap b{color:var(--ink);font-weight:600;}
+  .f3 .srclab{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;}
+  .f3 .srclab b{color:var(--data);font-weight:500;}
+  .caps{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);}
+  .cap{padding:13px 16px;border-bottom:1px solid var(--line-soft);display:flex;gap:12px;align-items:flex-start;}
+  .cap:last-child{border-bottom:none;}
+  .cap .cn{font-family:var(--mono);font-size:11px;color:var(--data);flex:0 0 auto;margin-top:2px;}
+  .cap .ct{font-size:13px;color:var(--ink);line-height:1.35;}
+  .cap .ct b{color:var(--ink);font-weight:600;} .cap .ct span{color:var(--ink-mute);}
+  .aibanner{margin-top:auto;border:1px solid var(--data);background:rgba(199,247,49,.05);border-radius:3px;padding:13px 18px;
+    display:flex;align-items:center;gap:11px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--ink-mute);text-transform:uppercase;}
+  .aibanner b{color:var(--data);font-weight:500;} .aibanner .cyc{color:var(--data);font-size:15px;}
+
+  /* ───────── F4 ───────── */
+  .f4 .head{margin-top:18px;}
+  .f4 h2{font-size:42px;letter-spacing:-.03em;margin-top:10px;line-height:1.02;}
+  .f4 .agg{margin-top:14px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:11px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
+  .f4 .agg .lab{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);}
+  .f4 .agg .af{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-mute);text-transform:uppercase;display:flex;align-items:baseline;gap:6px;}
+  .f4 .agg .af b{font-family:var(--serif);font-size:22px;color:var(--data);font-weight:400;letter-spacing:-.01em;line-height:1;}
+  .f4 .agg .sep{width:1px;height:22px;background:var(--line);}
+  .proof{margin-top:18px;display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  .case{background:var(--bg);padding:17px 20px 15px;display:flex;flex-direction:column;position:relative;min-height:0;}
+  .case .who{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .case .pf{font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:2px 6px;}
+  .case .stat{font-family:var(--serif);color:var(--data);line-height:.95;margin-top:auto;letter-spacing:-.02em;}
+  .case .desc{font-size:12px;line-height:1.4;color:var(--ink-mute);margin-top:9px;}
+  .case .desc b{color:var(--ink);font-weight:600;} .case .arrow{color:var(--accent);font-style:normal;}
+  .case.hero .stat{font-size:50px;} .case.sm .stat{font-size:30px;}
+  .case.c0{grid-column:span 4;} .case.c1{grid-column:span 4;} .case.c2{grid-column:span 4;} .case.c3{grid-column:span 6;} .case.c4{grid-column:span 6;}
+  .method{margin-top:16px;display:flex;align-items:center;border:1px solid var(--line);}
+  .step{flex:1;padding:11px 18px;border-right:1px solid var(--line);display:flex;align-items:baseline;gap:11px;}
+  .step:last-child{border-right:none;}
+  .step .n{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.1em;}
+  .step .verb{font-family:var(--serif);font-size:18px;color:var(--ink);}
+  .step .verb em{font-style:italic;color:var(--ink-mute);font-size:11px;font-family:var(--mono);margin-left:6px;letter-spacing:.04em;text-transform:uppercase;}
+  .footer{margin-top:auto;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding-top:16px;border-top:1px solid var(--line-soft);}
+  .allies{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .ally{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--data);border-radius:999px;padding:7px 14px;background:rgba(199,247,49,.05);}
+  .ally .name{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--data);font-weight:500;}
+  .ally .role{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);}
+  .allies .lab{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-right:2px;}
+  .f4 .impact{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-mute);line-height:1.08;text-align:right;}
+
+  /* ───────── F5 · CIERRE ───────── */
+  .f5 .netbg{position:absolute;inset:0;z-index:1;opacity:.4;
+    -webkit-mask-image:radial-gradient(ellipse at 50% 52%,#000 18%,transparent 72%);mask-image:radial-gradient(ellipse at 50% 52%,#000 18%,transparent 72%);}
+  .f5 .closewrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;z-index:3;}
+  .f5 .eyebrow{justify-content:center;}
+  .f5 h1{font-family:var(--serif);font-size:108px;line-height:.88;margin-top:18px;letter-spacing:-.04em;}
+  .f5 h1 .it{color:var(--accent);}
+  .f5 .sub{font-family:var(--serif);font-size:23px;color:var(--ink-mute);max-width:30ch;margin-top:22px;line-height:1.3;}
+  .f5 .sub b{color:var(--ink);font-weight:400;font-style:italic;}
+  .f5 .contact{margin-top:24px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;color:var(--ink);display:flex;gap:16px;align-items:center;}
+  .f5 .contact .ar{color:var(--accent);} .f5 .contact .dv{color:var(--line);}
+  .f5 .botbar{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:3;padding-top:15px;border-top:1px solid var(--line-soft);}
+  .f5 .sig{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:center;gap:9px;}
+  .f5 .sig b{color:var(--ink);font-weight:500;} .f5 .sig .dt{width:6px;height:6px;border-radius:50%;background:var(--data);box-shadow:0 0 8px var(--data);}
+  .f5 .botbar .all{display:flex;gap:14px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+  .f5 .botbar .all b{color:var(--data);font-weight:500;}
+
+  .nav{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:10px;}
+  .nav button{width:9px;height:9px;border-radius:50%;border:1px solid var(--ink-faint);background:transparent;cursor:pointer;padding:0;transition:.2s;}
+  .nav button.on{background:var(--accent);border-color:var(--accent);box-shadow:0 0 10px var(--accent-glow);}
+  .hint{position:fixed;left:22px;bottom:18px;z-index:50;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+  .hint b{color:var(--ink-mute);font-weight:500;}
+
+  .anim{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+  body.render-mode .nav,body.render-mode .hint{display:none !important;}
+  body.render-mode .anim{opacity:1 !important;transform:none !important;animation:none !important;}
+  body.render-mode .dot{animation:none !important;}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <!-- ════════ 01 · PORTADA ════════ -->
+  <section class="viewport"><div class="stage f0">
+    <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+    <div class="inner">
+      <div class="topbar anim">
+        <span class="l"><span class="dot"></span>XP3 · EXPONENTIAL PERFORMANCE</span>
+        <span class="c">HUB DIGITAL · MARKETING DIGITAL</span>
+        <span class="r"><b>01</b> / 06</span>
+      </div>
+      <div class="cov">
+        <div class="lead">
+          <span class="eyebrow anim" style="animation-delay:.05s">CONSULTORÍA DE MARKETING DIGITAL · MÉXICO · LATAM</span>
+          <div class="wm anim" style="animation-delay:.12s">XP3</div>
+          <div class="kln anim" style="animation-delay:.2s">EXPONENTIAL · PERFORMANCE</div>
+          <p class="tag anim" style="animation-delay:.28s">El <i>hub digital</i> que conecta datos, estrategia y tecnología —y se queda a ejecutar.</p>
+        </div>
+        <div class="covpanel anim" style="animation-delay:.22s">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <span class="hud tl"><b>HUB</b> · ONLINE</span><span class="hud tr">SYNC OK</span>
+          <span class="hud bl">NODOS · 12</span><span class="hud br">LINKS · LIVE</span>
+          <svg class="net" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
+            <g stroke="#25252A" stroke-width="1" fill="none">
+              <line x1="185" y1="130" x2="70" y2="60"/><line x1="185" y1="130" x2="330" y2="50"/><line x1="185" y1="130" x2="250" y2="215"/>
+              <line x1="185" y1="130" x2="120" y2="175"/><line x1="185" y1="130" x2="300" y2="150"/><line x1="185" y1="130" x2="95" y2="105"/>
+              <line x1="70" y1="60" x2="40" y2="130"/><line x1="330" y1="50" x2="355" y2="110"/><line x1="330" y1="50" x2="200" y2="35"/>
+              <line x1="300" y1="150" x2="330" y2="50"/><line x1="300" y1="150" x2="355" y2="110"/><line x1="250" y1="215" x2="120" y2="175"/>
+            </g>
+            <g fill="#5A5A55"><circle cx="150" cy="205" r="1"/><circle cx="290" cy="92" r="1"/><circle cx="60" cy="190" r="1"/><circle cx="345" cy="180" r="1"/><circle cx="160" cy="80" r="1"/><circle cx="110" cy="40" r="1"/><circle cx="230" cy="118" r="1"/><circle cx="25" cy="80" r="1"/></g>
+            <g fill="#00E5FF">
+              <circle cx="70" cy="60" r="3.4"/><circle cx="330" cy="50" r="3.4"/><circle cx="250" cy="215" r="3.4"/>
+              <circle cx="120" cy="175" r="2.2"><animate attributeName="opacity" values="0.45;1;0.45" dur="3.4s" repeatCount="indefinite"/></circle>
+              <circle cx="300" cy="150" r="2.2"><animate attributeName="opacity" values="1;0.4;1" dur="3.0s" repeatCount="indefinite"/></circle>
+              <circle cx="40" cy="130" r="2"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite"/></circle>
+              <circle cx="200" cy="35" r="2"/><circle cx="355" cy="110" r="2"/><circle cx="95" cy="105" r="2"/>
+            </g>
+            <circle cx="185" cy="130" r="13" fill="none" stroke="#C7F731" stroke-width="1" opacity="0.35">
+              <animate attributeName="r" values="11;20;11" dur="2.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.4;0.04;0.4" dur="2.6s" repeatCount="indefinite"/></circle>
+            <circle cx="185" cy="130" r="6.5" fill="#C7F731"><animate attributeName="r" values="6;7.6;6" dur="2.6s" repeatCount="indefinite"/></circle>
+            <circle r="2.2" fill="#C7F731"><animateMotion dur="2.8s" repeatCount="indefinite" path="M70,60 L185,130"/></circle>
+            <circle r="2.2" fill="#00E5FF"><animateMotion dur="3.6s" repeatCount="indefinite" path="M185,130 L330,50"/></circle>
+            <circle r="2" fill="#00E5FF"><animateMotion dur="3.2s" repeatCount="indefinite" path="M250,215 L185,130"/></circle>
+            <text x="70" y="46" fill="#8E8E88" font-size="10" letter-spacing="1.3" text-anchor="middle">DATOS</text>
+            <text x="330" y="36" fill="#8E8E88" font-size="10" letter-spacing="1.3" text-anchor="middle">ESTRATEGIA</text>
+            <text x="250" y="234" fill="#8E8E88" font-size="10" letter-spacing="1.3" text-anchor="middle">TECNOLOGÍA</text>
+          </svg>
+        </div>
+      </div>
+      <div class="covmeta anim" style="animation-delay:.34s">
+        <span>CDMX · MÉXICO · LATAM</span><span><b>xp3.com.mx</b> · contacto@xp3.com.mx</span><span>BROCHURE · 2026</span>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ════════ 02 · POSICIONAMIENTO ════════ -->
+  <section class="viewport"><div class="stage f1">
+    <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+    <div class="inner">
+      <div class="topbar anim">
+        <span class="l"><span class="dot"></span>XP3 · EXPONENTIAL PERFORMANCE</span>
+        <span class="c">HUB DIGITAL · DATOS × ESTRATEGIA × TECNOLOGÍA</span>
+        <span class="r"><b>02</b> / 06</span>
+      </div>
+      <div class="hero">
+        <div>
+          <span class="eyebrow anim" style="animation-delay:.05s">EL HUB · QUÉ HACEMOS</span>
+          <h1 class="anim" style="animation-delay:.1s">Datos, estrategia<br/>y tecnología.<br/><span class="it cy">Conectados.</span></h1>
+          <p class="lede anim" style="animation-delay:.2s">XP3 opera como <b style="color:var(--ink)">hub</b>: integra tus fuentes de datos, define la estrategia y la ejecuta con la mejor tecnología del mercado.</p>
+          <p class="promise anim" style="animation-delay:.28s">No solo te decimos qué hacer —<br/><i>te acompañamos y ejecutamos.</i></p>
+        </div>
+        <div class="panel anim" style="animation-delay:.22s">
+          <span class="corner tl"></span><span class="corner br"></span>
+          <span class="hud t"><b>HUB</b> · ACTIVE</span><span class="hud b">NODOS · 12</span><span class="hud br2">SYNC OK</span>
+          <svg class="net" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
+            <g stroke="#25252A" stroke-width="1" fill="none">
+              <line x1="185" y1="130" x2="70" y2="60"/><line x1="185" y1="130" x2="330" y2="50"/><line x1="185" y1="130" x2="250" y2="215"/>
+              <line x1="185" y1="130" x2="120" y2="175"/><line x1="185" y1="130" x2="300" y2="150"/><line x1="185" y1="130" x2="95" y2="105"/>
+              <line x1="70" y1="60" x2="40" y2="130"/><line x1="330" y1="50" x2="355" y2="110"/><line x1="330" y1="50" x2="200" y2="35"/>
+              <line x1="300" y1="150" x2="330" y2="50"/><line x1="300" y1="150" x2="355" y2="110"/><line x1="250" y1="215" x2="120" y2="175"/>
+            </g>
+            <g fill="#5A5A55"><circle cx="150" cy="205" r="1"/><circle cx="290" cy="92" r="1"/><circle cx="60" cy="190" r="1"/><circle cx="345" cy="180" r="1"/><circle cx="160" cy="80" r="1"/><circle cx="110" cy="40" r="1"/><circle cx="230" cy="118" r="1"/></g>
+            <g fill="#00E5FF">
+              <circle cx="70" cy="60" r="3.4"/><circle cx="330" cy="50" r="3.4"/><circle cx="250" cy="215" r="3.4"/>
+              <circle cx="120" cy="175" r="2.2"><animate attributeName="opacity" values="0.45;1;0.45" dur="3.4s" repeatCount="indefinite"/></circle>
+              <circle cx="300" cy="150" r="2.2"><animate attributeName="opacity" values="1;0.4;1" dur="3.0s" repeatCount="indefinite"/></circle>
+              <circle cx="40" cy="130" r="2"/><circle cx="200" cy="35" r="2"/><circle cx="355" cy="110" r="2"/><circle cx="95" cy="105" r="2"/>
+            </g>
+            <circle cx="185" cy="130" r="13" fill="none" stroke="#C7F731" stroke-width="1" opacity="0.35">
+              <animate attributeName="r" values="11;20;11" dur="2.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.4;0.04;0.4" dur="2.6s" repeatCount="indefinite"/></circle>
+            <circle cx="185" cy="130" r="6.5" fill="#C7F731"><animate attributeName="r" values="6;7.6;6" dur="2.6s" repeatCount="indefinite"/></circle>
+            <circle r="2.2" fill="#C7F731"><animateMotion dur="2.8s" repeatCount="indefinite" path="M70,60 L185,130"/></circle>
+            <circle r="2" fill="#00E5FF"><animateMotion dur="3.6s" repeatCount="indefinite" path="M185,130 L330,50"/></circle>
+            <text x="70" y="46" fill="#8E8E88" font-size="10" letter-spacing="1.3" text-anchor="middle">DATOS</text>
+            <text x="330" y="36" fill="#8E8E88" font-size="10" letter-spacing="1.3" text-anchor="middle">ESTRATEGIA</text>
+            <text x="250" y="234" fill="#8E8E88" font-size="10" letter-spacing="1.3" text-anchor="middle">TECNOLOGÍA</text>
+          </svg>
+        </div>
+      </div>
+      <div class="marquee anim" style="animation-delay:.32s">
+        hub digital <i>●</i> social listening <i>●</i> gestión de redes <i>●</i> gobernanza digital <i>●</i> estrategia <i>●</i> agentes IA <i>●</i> analítica de datos
+      </div>
+      <div class="pillars anim" style="animation-delay:.38s">
+        <span class="spine"></span><span class="node n1"></span><span class="node n2"></span><span class="node n3"></span>
+        <div class="pillar"><div class="k"><span>/ 01 · DATOS</span><span class="verb">LEER</span></div><h3>Datos.</h3><p>Conectamos tus fuentes —CRM, redes, paid media, web, escucha social— en un solo modelo de datos legible.</p></div>
+        <div class="pillar"><div class="k"><span>/ 02 · ESTRATEGIA</span><span class="verb">DECIDIR</span></div><h3>Estrategia.</h3><p>Definimos hacia dónde ir: prioridades, canales, inversión y KPIs. Documentos vivos, no PDFs muertos.</p></div>
+        <div class="pillar"><div class="k"><span>/ 03 · TECNOLOGÍA</span><span class="verb">ENCENDER</span></div><h3>Tecnología.</h3><p>Implementamos y operamos: escucha social, gestión de redes, agentes IA y dashboards de medición.</p></div>
+      </div>
+      <div class="footnote anim" style="animation-delay:.44s">
+        <span>Tres pilares · <b>una sola operación.</b></span>
+        <span>Ya tienes las personas y las herramientas — <b>falta conectar los datos.</b></span>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ════════ 03 · CREATIVIDAD + CICLO ════════ -->
+  <section class="viewport"><div class="stage f2">
+    <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+    <div class="inner">
+      <div class="topbar anim">
+        <span class="l"><span class="dot"></span>XP3 · EXPONENTIAL PERFORMANCE</span>
+        <span class="c">CREATIVIDAD → DATOS → ESTRATEGIA → TECNOLOGÍA → IMPACTO</span>
+        <span class="r"><b>03</b> / 06</span>
+      </div>
+      <div class="head">
+        <div>
+          <span class="eyebrow anim">ESPECIALISTAS EN MARKETING DIGITAL</span>
+          <h2 class="anim" style="animation-delay:.08s">No es solo data.<br/>Es <span class="it da">contenido que engancha</span>, vuelto sistema.</h2>
+        </div>
+        <p class="lede anim" style="animation-delay:.14s">Creamos <b>narrativa, contenido y diseño</b> que conecta con las audiencias de tus audiencias. Y lo convertimos en un ciclo medible: cada interacción es dato, cada dato es decisión, cada decisión es impacto.</p>
+      </div>
+      <div class="loopwrap anim" style="animation-delay:.2s">
+        <div class="loop">
+          <div class="lnode edge">
+            <svg class="gl" viewBox="0 0 24 24"><path d="M4 16 L9 7 L14 15 L17 10 L20 16"/><circle cx="12" cy="4" r="1.6"/></svg>
+            <div class="k">01 · CREATIVIDAD</div><h3>Engancha.</h3><p>Narrativa, contenido y diseño que tus audiencias sí quieren ver.</p>
+          </div>
+          <div class="larrow">→</div>
+          <div class="lnode">
+            <svg class="gl" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="20"/><rect x="5" y="11" width="3" height="9"/><rect x="11" y="6" width="3" height="14"/><rect x="17" y="13" width="3" height="7"/></svg>
+            <div class="k">02 · DATOS</div><h3>Mide.</h3><p>Escucha social y analítica: el engagement se vuelve evidencia.</p>
+          </div>
+          <div class="larrow">→</div>
+          <div class="lnode">
+            <svg class="gl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 12 L17 9"/><circle cx="12" cy="12" r="1.6" fill="#00E5FF" stroke="none"/></svg>
+            <div class="k">03 · ESTRATEGIA</div><h3>Decide.</h3><p>Prioridades, canales e inversión sobre datos, no intuición.</p>
+          </div>
+          <div class="larrow">→</div>
+          <div class="lnode">
+            <svg class="gl" viewBox="0 0 24 24"><path d="M13 3 L5 13 L11 13 L9 21 L19 10 L13 10 Z"/></svg>
+            <div class="k">04 · TECNOLOGÍA</div><h3>Ejecuta.</h3><p>CRM, agentes IA y dashboards que operan la estrategia.</p>
+          </div>
+          <div class="larrow">→</div>
+          <div class="lnode edge">
+            <svg class="gl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="#C7F731" stroke="none"/></svg>
+            <div class="k">05 · IMPACTO</div><h3>Resultados.</h3><p>Crecimiento, leads y ventas medibles para el negocio.</p>
+          </div>
+        </div>
+        <div class="loopback"><span class="cyc">↻</span> <b>El ciclo se repite</b> — cada resultado afina la siguiente narrativa. Eso es performance exponencial.</div>
+      </div>
+      <div class="creates anim" style="animation-delay:.34s">
+        <span class="lab">Lo que creamos —</span>
+        <span class="chip">Narrativa de marca</span><span class="chip">Pilares de contenido</span><span class="chip">Diseño editorial &amp; social</span><span class="chip">Campañas</span><span class="chip">Experiencias presenciales</span>
+        <span class="ev">Ej.: <b>4 pilares de contenido</b> llevaron a Disney Travel Planner de 11K a 20.8K seguidores.</span>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ════════ 04 · TECNOLOGÍA ════════ -->
+  <section class="viewport"><div class="stage f3">
+    <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+    <div class="inner">
+      <div class="topbar anim">
+        <span class="l"><span class="dot"></span>XP3 · EXPONENTIAL PERFORMANCE</span>
+        <span class="c">TECNOLOGÍA · DECISIONES CON EVIDENCIA</span>
+        <span class="r"><b>04</b> / 06</span>
+      </div>
+      <div class="head">
+        <span class="eyebrow anim">TECNOLOGÍA · HERRAMIENTA PARA DECIDIR</span>
+        <h2 class="anim" style="animation-delay:.08s">Tecnología para decisiones <span class="it cy">que generan impacto.</span></h2>
+        <p class="lede anim" style="animation-delay:.12s">No es la herramienta por la herramienta: <b>integramos las mejores —propias y de clase mundial— en un solo modelo de datos</b> para decidir con evidencia, de WhatsApp a toda la escucha social, y volverlo impacto de negocio.</p>
+      </div>
+      <div class="body">
+        <div>
+          <div class="mock anim" style="animation-delay:.16s">
+            <div class="bar">
+              <span class="traffic"><span></span><span></span><span></span></span>
+              <span class="brand"><b>◆</b> AGENTE WA · IA</span>
+              <span class="tabs"><span>Inbox</span><span class="on">Dashboard</span><span>Campañas</span></span>
+              <span class="agt">AGENTE IA <b>ON</b><span class="sw"></span></span>
+            </div>
+            <div class="scr">
+              <div class="mtiles">
+                <div class="mtile"><div class="kk">WhatsApp</div><div class="vv">6</div></div>
+                <div class="mtile"><div class="kk">Catálogo · SKU</div><div class="vv">124</div></div>
+                <div class="mtile"><div class="kk">Respondieron</div><div class="vv">58%</div></div>
+                <div class="mtile acc"><div class="kk">Convertido</div><div class="vv">$420K</div></div>
+              </div>
+              <div class="ttl">Embudo de conversación · por etapa</div>
+              <div class="funnel">
+                <div class="frow"><span class="fl">Iniciadas</span><span class="ftrk"><span class="ffill" style="width:100%"></span></span><span class="fp">100%</span></div>
+                <div class="frow"><span class="fl">Respondieron</span><span class="ftrk"><span class="ffill" style="width:58%"></span></span><span class="fp">58%</span></div>
+                <div class="frow"><span class="fl">En seguimiento</span><span class="ftrk"><span class="ffill" style="width:34%"></span></span><span class="fp">34%</span></div>
+                <div class="frow"><span class="fl">Convertidas</span><span class="ftrk"><span class="ffill" style="width:21%"></span></span><span class="fp">21%</span></div>
+              </div>
+            </div>
+          </div>
+          <p class="mockcap anim" style="animation-delay:.2s">Ejemplo · <b>agente de WhatsApp con IA, propio.</b> El chatbot se enciende y se apaga por usuario y por cliente, y el catálogo vive en el chat —para el cliente y para el agente—, así engancha más fácil.</p>
+        </div>
+        <div>
+          <div class="srclab anim" style="animation-delay:.22s">Lo que conectamos · <b>en un solo modelo de datos</b></div>
+          <div class="caps anim" style="animation-delay:.24s">
+            <div class="cap"><span class="cn">◆</span><span class="ct"><b>Agente de WhatsApp con IA · propio.</b> <span>Conversational commerce: campañas, seguimiento de leads y catálogo en el chat.</span></span></div>
+            <div class="cap"><span class="cn">◆</span><span class="ct"><b>Hootsuite × Talkwalker.</b> <span>Todas las redes + escucha social: +150M fuentes, sentimiento multilingüe.</span></span></div>
+            <div class="cap"><span class="cn">◆</span><span class="ct"><b>Artool · analítica.</b> <span>Modelos de medición y atribución integrados a tu stack.</span></span></div>
+            <div class="cap"><span class="cn">◆</span><span class="ct"><b>Tu stack actual.</b> <span>Odoo, Shopify, Meta Ads, CRM — conectados, no aislados.</span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="aibanner anim" style="animation-delay:.32s">
+        <span class="cyc">↳</span> Todas nuestras soluciones pueden incluir <b>integraciones y análisis habilitados por IA.</b>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ════════ 05 · LA PRUEBA ════════ -->
+  <section class="viewport"><div class="stage f4">
+    <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+    <div class="inner">
+      <div class="topbar anim">
+        <span class="l"><span class="dot"></span>XP3 · EXPONENTIAL PERFORMANCE</span>
+        <span class="c">RESULTADOS · IMPACTO Y TRANSFORMACIÓN</span>
+        <span class="r"><b>05</b> / 06</span>
+      </div>
+      <div class="head">
+        <span class="eyebrow anim">RESULTADOS · TRANSFORMACIÓN DE CLIENTES</span>
+        <h2 class="anim" style="animation-delay:.08s">No son promesas.<br/><span class="it cy">Los números hablan de impacto.</span></h2>
+        <div class="agg anim" style="animation-delay:.14s">
+          <span class="lab">El patrón se repite —</span>
+          <span class="af"><b>100%</b> orgánico</span><span class="sep"></span>
+          <span class="af"><b>0</b> en pauta</span><span class="sep"></span>
+          <span class="af"><b>5</b> industrias</span><span class="sep"></span>
+          <span class="af"><b>8×</b> sobre el promedio</span>
+        </div>
+      </div>
+      <div class="proof">
+        <div class="case hero c0 anim" style="animation-delay:.18s"><span class="who">XPERT PHARMA · REVISTA <span class="pf">in · IG</span></span><div class="stat">16<span style="font-size:.55em">%</span></div><p class="desc">engagement rate. <b>8× el promedio</b> de la industria (2%). 100% orgánico.</p></div>
+        <div class="case hero c1 anim" style="animation-delay:.24s"><span class="who">DISNEY TRAVEL PLANNER · TRIPLETS <span class="pf">IG · TT</span></span><div class="stat">11K <span class="arrow">→</span> 20.8K</div><p class="desc">seguidores. <b>3× reservas</b> al mes, sin invertir en pauta.</p></div>
+        <div class="case sm c2 anim" style="animation-delay:.30s"><span class="who">DRA. FABIOLA BURCIAGA · PEDIATRÍA <span class="pf">IG</span></span><div class="stat">6.89<span style="font-size:.55em">%</span></div><p class="desc">engagement — rango <b>“excelente”</b> para cuentas pequeñas.</p></div>
+        <div class="case sm c3 anim" style="animation-delay:.36s"><span class="who">MCX · MASTER THE HEAT <span class="pf">B2B</span></span><div class="stat">22 <span class="arrow">→</span> 13</div><p class="desc"><b>22 leads B2B calificados</b>, 13 oportunidades. Experiencia presencial conectada con data.</p></div>
+        <div class="case sm c4 anim" style="animation-delay:.42s"><span class="who">LA ESMERALDA × IA · ALTA JOYERÍA <span class="pf">WA</span></span><div class="stat">24/7</div><p class="desc"><b>Agente virtual con IA en WhatsApp.</b> Cero silencios de fin de semana — donde la competencia tardaba días.</p></div>
+      </div>
+      <div class="method anim" style="animation-delay:.46s">
+        <div class="step"><span class="n">01</span><span class="verb">Conectar<em>integramos</em></span></div>
+        <div class="step"><span class="n">02</span><span class="verb">Definir<em>priorizamos</em></span></div>
+        <div class="step"><span class="n">03</span><span class="verb">Operar<em>ejecutamos</em></span></div>
+        <div class="step"><span class="n">04</span><span class="verb">Iterar<em>medimos</em></span></div>
+      </div>
+      <div class="footer anim" style="animation-delay:.5s">
+        <div class="allies">
+          <span class="lab">Alianzas</span>
+          <span class="ally"><span class="name">Artool</span><span class="role">· Analítica de datos</span></span>
+          <span class="ally"><span class="name">Hootsuite × Talkwalker</span><span class="role">· Social listening</span></span>
+        </div>
+        <div class="impact">Mismo método.<br/>Otra industria.</div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ════════ 06 · CIERRE ════════ -->
+  <section class="viewport"><div class="stage f5">
+    <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+    <svg class="net netbg" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+      <g stroke="#25252A" stroke-width="1" fill="none">
+        <line x1="185" y1="130" x2="70" y2="60"/><line x1="185" y1="130" x2="330" y2="50"/><line x1="185" y1="130" x2="250" y2="215"/>
+        <line x1="185" y1="130" x2="120" y2="175"/><line x1="185" y1="130" x2="300" y2="150"/><line x1="185" y1="130" x2="95" y2="105"/>
+        <line x1="70" y1="60" x2="40" y2="130"/><line x1="330" y1="50" x2="355" y2="110"/><line x1="330" y1="50" x2="200" y2="35"/>
+        <line x1="300" y1="150" x2="330" y2="50"/><line x1="250" y1="215" x2="120" y2="175"/>
+      </g>
+      <g fill="#00E5FF" opacity="0.8">
+        <circle cx="70" cy="60" r="3"/><circle cx="330" cy="50" r="3"/><circle cx="250" cy="215" r="3"/>
+        <circle cx="120" cy="175" r="2"/><circle cx="300" cy="150" r="2"/><circle cx="40" cy="130" r="2"/><circle cx="200" cy="35" r="2"/><circle cx="355" cy="110" r="2"/><circle cx="95" cy="105" r="2"/>
+      </g>
+      <circle cx="185" cy="130" r="6.5" fill="#C7F731"><animate attributeName="r" values="6;7.6;6" dur="2.6s" repeatCount="indefinite"/></circle>
+      <circle r="2.2" fill="#C7F731"><animateMotion dur="2.8s" repeatCount="indefinite" path="M70,60 L185,130"/></circle>
+      <circle r="2" fill="#00E5FF"><animateMotion dur="3.6s" repeatCount="indefinite" path="M185,130 L330,50"/></circle>
+    </svg>
+    <div class="inner">
+      <div class="topbar anim">
+        <span class="l"><span class="dot"></span>XP3 · EXPONENTIAL PERFORMANCE</span>
+        <span class="c">EMPECEMOS</span>
+        <span class="r"><b>06</b> / 06</span>
+      </div>
+      <div class="closewrap">
+        <span class="eyebrow anim">CONVERSEMOS</span>
+        <h1 class="anim" style="animation-delay:.1s">Conectemos los datos.<br/><span class="it">Encendamos el impacto.</span></h1>
+        <p class="sub anim" style="animation-delay:.2s">Si tu marca tiene los datos pero no la operación que los vuelve impacto — <b>hablemos.</b></p>
+        <div class="contact anim" style="animation-delay:.28s">
+          <span>contacto@xp3.com.mx</span><span class="dv">·</span><span>xp3.com.mx</span><span class="dv">·</span><span>LinkedIn ↗</span><span class="dv">·</span><span>Instagram ↗</span><span class="ar">→</span>
+        </div>
+      </div>
+      <div class="botbar anim" style="animation-delay:.36s">
+        <span class="sig"><span class="dt"></span>XP3 · <b>EXPONENTIAL PERFORMANCE</b></span>
+        <span class="all">PARTNERS · <b>ARTOOL</b> · <b>HOOTSUITE × TALKWALKER</b></span>
+      </div>
+    </div>
+  </div></section>
+
+</div>
+
+<nav class="nav" id="nav"><button data-i="0" class="on"></button><button data-i="1"></button><button data-i="2"></button><button data-i="3"></button><button data-i="4"></button><button data-i="5"></button></nav>
+<div class="hint">← → · <b>navega entre caras</b></div>
+
+<script>
+  const deck=document.getElementById('deck');
+  const vps=[...document.querySelectorAll('.viewport')];
+  const dots=[...document.querySelectorAll('#nav button')];
+  function fit(){const s=Math.min(window.innerWidth/1280,window.innerHeight/720);document.documentElement.style.setProperty('--s',s);}
+  window.addEventListener('resize',fit);fit();
+  function go(i){i=Math.max(0,Math.min(vps.length-1,i));vps[i].scrollIntoView({behavior:'smooth'});}
+  let cur=0;
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){cur=vps.indexOf(e.target);dots.forEach((d,k)=>d.classList.toggle('on',k===cur));}})},{threshold:.6});
+  vps.forEach(v=>io.observe(v));
+  dots.forEach(d=>d.addEventListener('click',()=>go(+d.dataset.i)));
+  window.addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();go(cur+1);}
+    if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(cur-1);}
+  });
+</script>
+</body>
+</html>
